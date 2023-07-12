@@ -28,9 +28,6 @@ const routes = [
 ]
 
 
-
-
-
 function asyncRoutesHandler(routes){
   return routes.map(route => {
     // 1.判断 route.component 是Layout不？ 是就是父，否就是子
@@ -88,7 +85,6 @@ router.beforeEach((to,from,next)=>{
   if(window.hasMenu) return next();
   // 4.加载菜单
   // window.hasMenu = true;
-  debugger
   loadMenu(to,next)
 })
 export default router
