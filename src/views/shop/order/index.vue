@@ -5,6 +5,7 @@
       :linexAxis="linexAxis"
       :lineSeries1="lineSeries1"
       :lineSeries2="lineSeries2"
+      @getMessage="showMsg"
     ></lineBar>
   </div>
 </template>
@@ -26,6 +27,11 @@ export default {
       },
     };
   },
+  methods:{
+    showMsg(title) {
+      console.log(title)
+    },
+  }
 };
 </script>
 
